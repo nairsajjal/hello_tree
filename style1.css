@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'pluto_sansextralight';
+  src: url('pluto_sans_extralight-webfont.woff2') format('woff2'),
+       url('pluto_sans_extralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+body{
+ height:4000px;
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+background-color: #FFDD24;
+font-family: 'pluto_sansextralight', Arial, sans-serif;
+font-weight:normal;
+font-style:normal;
+}
+h1{
+  display: flex;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 320px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    font-size: 5rem;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+.myCanvas{
+  position: absolute;
+  top:-60px;
+  left:374px;
+  bottom:0px;
+  width:250px;
+  height:250px;
+  
+  transition:5s;
+  transition-delay: 1s;
+}

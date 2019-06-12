@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TimelineMax test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+
+    <meta http-equiv="refresh" content="5;url=file:///home/sajjal/Desktop/hello_tree/nextpage.html" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <script src="ScrollMagic.js"></script>
+    <script src="plugins/animation.gsap.js"></script>
+    <script src="debug.addIndicators.min.js"></script>
+    <link href="style1.css" rel="stylesheet">
+</head>
+
+<body>
+     
+
+        <div>
+
+                <h1>HELLO<span><b>TREE</b></span>
+                <span><canvas class="myCanvas" ></canvas></span>
+                </h1>
+               
+                </div>
+
+                <div></div>
+
+<script>
+var canvasElement = document.querySelector(".myCanvas");
+var context = canvasElement.getContext("2d");
+ 
+// the triangle
+context.beginPath();
+context.moveTo(125, 10);
+context.lineTo(10, 100);
+context.lineTo(240, 100);
+context.closePath();
+ 
+// the outline
+context.lineWidth = 2;
+context.strokeStyle = 'black';
+context.stroke();
+</script>
+
+
+<script>
+var scale_tween = TweenMax.to('.myCanvas', 1, {
+  transform: 'scale(14.75)',
+  ease: Linear.easeNone
+});
+  
+  const controller = new ScrollMagic.Controller();
+ 
+     
+  
+  
+  
+  const scene = new ScrollMagic.Scene({
+    triggerElement:".myCanvas",
+    triggerHook:"onCenter",
+    duration:200,
+    offset:-50
+
+    
+           
+})
+
+.setTween(scene)
+.addTo(controller);
+
+</script>
+
+</body>
+</html>
